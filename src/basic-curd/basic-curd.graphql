@@ -1,0 +1,24 @@
+type BasicCurd {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateBasicCurdInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateBasicCurdInput {
+  id: Int!
+}
+
+type Query {
+  basicCurd: [BasicCurd]!
+  basicCurd(id: Int!): BasicCurd
+}
+
+type Mutation {
+  createBasicCurd(createBasicCurdInput: CreateBasicCurdInput!): BasicCurd!
+  updateBasicCurd(updateBasicCurdInput: UpdateBasicCurdInput!): BasicCurd!
+  removeBasicCurd(id: Int!): BasicCurd
+}
